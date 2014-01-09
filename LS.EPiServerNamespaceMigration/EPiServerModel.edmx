@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EPiServer.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblBigTable">
+          <Key>
+            <PropertyRef Name="pkId" />
+            <PropertyRef Name="Row" />
+          </Key>
+          <Property Name="pkId" Type="bigint" Nullable="false" />
+          <Property Name="Row" Type="int" Nullable="false" />
+          <Property Name="StoreName" Type="nvarchar" MaxLength="375" Nullable="false" />
+          <Property Name="ItemType" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="Boolean01" Type="bit" />
+          <Property Name="Boolean02" Type="bit" />
+          <Property Name="Boolean03" Type="bit" />
+          <Property Name="Boolean04" Type="bit" />
+          <Property Name="Boolean05" Type="bit" />
+          <Property Name="Integer01" Type="int" />
+          <Property Name="Integer02" Type="int" />
+          <Property Name="Integer03" Type="int" />
+          <Property Name="Integer04" Type="int" />
+          <Property Name="Integer05" Type="int" />
+          <Property Name="Integer06" Type="int" />
+          <Property Name="Integer07" Type="int" />
+          <Property Name="Integer08" Type="int" />
+          <Property Name="Integer09" Type="int" />
+          <Property Name="Integer10" Type="int" />
+          <Property Name="Long01" Type="bigint" />
+          <Property Name="Long02" Type="bigint" />
+          <Property Name="Long03" Type="bigint" />
+          <Property Name="Long04" Type="bigint" />
+          <Property Name="Long05" Type="bigint" />
+          <Property Name="DateTime01" Type="datetime" />
+          <Property Name="DateTime02" Type="datetime" />
+          <Property Name="DateTime03" Type="datetime" />
+          <Property Name="DateTime04" Type="datetime" />
+          <Property Name="DateTime05" Type="datetime" />
+          <Property Name="Guid01" Type="uniqueidentifier" />
+          <Property Name="Guid02" Type="uniqueidentifier" />
+          <Property Name="Guid03" Type="uniqueidentifier" />
+          <Property Name="Float01" Type="float" />
+          <Property Name="Float02" Type="float" />
+          <Property Name="Float03" Type="float" />
+          <Property Name="Float04" Type="float" />
+          <Property Name="Float05" Type="float" />
+          <Property Name="Float06" Type="float" />
+          <Property Name="Float07" Type="float" />
+          <Property Name="Decimal01" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Decimal02" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="String01" Type="nvarchar(max)" />
+          <Property Name="String02" Type="nvarchar(max)" />
+          <Property Name="String03" Type="nvarchar(max)" />
+          <Property Name="String04" Type="nvarchar(max)" />
+          <Property Name="String05" Type="nvarchar(max)" />
+          <Property Name="String06" Type="nvarchar(max)" />
+          <Property Name="String07" Type="nvarchar(max)" />
+          <Property Name="String08" Type="nvarchar(max)" />
+          <Property Name="String09" Type="nvarchar(max)" />
+          <Property Name="String10" Type="nvarchar(max)" />
+          <Property Name="Binary01" Type="varbinary(max)" />
+          <Property Name="Binary02" Type="varbinary(max)" />
+          <Property Name="Binary03" Type="varbinary(max)" />
+          <Property Name="Binary04" Type="varbinary(max)" />
+          <Property Name="Binary05" Type="varbinary(max)" />
+          <Property Name="Indexed_Boolean01" Type="bit" />
+          <Property Name="Indexed_Integer01" Type="int" />
+          <Property Name="Indexed_Integer02" Type="int" />
+          <Property Name="Indexed_Integer03" Type="int" />
+          <Property Name="Indexed_Long01" Type="bigint" />
+          <Property Name="Indexed_Long02" Type="bigint" />
+          <Property Name="Indexed_DateTime01" Type="datetime" />
+          <Property Name="Indexed_Guid01" Type="uniqueidentifier" />
+          <Property Name="Indexed_Float01" Type="float" />
+          <Property Name="Indexed_Float02" Type="float" />
+          <Property Name="Indexed_Float03" Type="float" />
+          <Property Name="Indexed_Decimal01" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Indexed_String01" Type="nvarchar" MaxLength="450" />
+          <Property Name="Indexed_String02" Type="nvarchar" MaxLength="450" />
+          <Property Name="Indexed_String03" Type="nvarchar" MaxLength="450" />
+          <Property Name="Indexed_Binary01" Type="varbinary" MaxLength="900" />
+        </EntityType>
+        <EntityType Name="tblBigTableReference">
+          <Key>
+            <PropertyRef Name="pkId" />
+            <PropertyRef Name="PropertyName" />
+            <PropertyRef Name="IsKey" />
+            <PropertyRef Name="Index" />
+          </Key>
+          <Property Name="pkId" Type="bigint" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="PropertyName" Type="nvarchar" MaxLength="75" Nullable="false" />
+          <Property Name="CollectionType" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ElementType" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ElementStoreName" Type="nvarchar" MaxLength="375" />
+          <Property Name="IsKey" Type="bit" Nullable="false" />
+          <Property Name="Index" Type="int" Nullable="false" />
+          <Property Name="BooleanValue" Type="bit" />
+          <Property Name="IntegerValue" Type="int" />
+          <Property Name="LongValue" Type="bigint" />
+          <Property Name="DateTimeValue" Type="datetime" />
+          <Property Name="GuidValue" Type="uniqueidentifier" />
+          <Property Name="FloatValue" Type="float" />
+          <Property Name="StringValue" Type="nvarchar(max)" />
+          <Property Name="BinaryValue" Type="varbinary(max)" />
+          <Property Name="RefIdValue" Type="bigint" />
+        </EntityType>
+        <EntityType Name="tblBigTableStoreInfo">
+          <Key>
+            <PropertyRef Name="StoreName" />
+            <PropertyRef Name="PropertyName" />
+          </Key>
+          <Property Name="StoreName" Type="nvarchar" MaxLength="375" Nullable="false" />
+          <Property Name="PropertyName" Type="nvarchar" MaxLength="75" Nullable="false" />
+          <Property Name="PropertyMapType" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="PropertyIndex" Type="int" Nullable="false" />
+          <Property Name="PropertyType" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Version" Type="int" Nullable="false" />
+          <Property Name="ColumnName" Type="nvarchar" MaxLength="128" />
+          <Property Name="ColumnRowIndex" Type="int" />
+          <Property Name="TableName" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="tblPageDefinitionType">
+          <Key>
+            <PropertyRef Name="pkID" />
+          </Key>
+          <Property Name="pkID" Type="int" Nullable="false" />
+          <Property Name="Property" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TypeName" Type="nvarchar" MaxLength="255" />
+          <Property Name="AssemblyName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="tblPlugIn">
+          <Key>
+            <PropertyRef Name="pkID" />
+          </Key>
+          <Property Name="pkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AssemblyName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TypeName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Settings" Type="ntext" />
+          <Property Name="Saved" Type="datetime" Nullable="false" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EPiServerModelStoreContainer">
+          <EntitySet Name="tblBigTable" EntityType="Self.tblBigTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblBigTableReference" EntityType="Self.tblBigTableReference" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblBigTableStoreInfo" EntityType="Self.tblBigTableStoreInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblPageDefinitionType" EntityType="Self.tblPageDefinitionType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblPlugIn" EntityType="Self.tblPlugIn" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EPiServer.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblBigTable">
+          <Key>
+            <PropertyRef Name="pkId" />
+            <PropertyRef Name="Row" />
+          </Key>
+          <Property Name="pkId" Type="Int64" Nullable="false" />
+          <Property Name="Row" Type="Int32" Nullable="false" />
+          <Property Name="StoreName" Type="String" MaxLength="375" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ItemType" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Boolean01" Type="Boolean" />
+          <Property Name="Boolean02" Type="Boolean" />
+          <Property Name="Boolean03" Type="Boolean" />
+          <Property Name="Boolean04" Type="Boolean" />
+          <Property Name="Boolean05" Type="Boolean" />
+          <Property Name="Integer01" Type="Int32" />
+          <Property Name="Integer02" Type="Int32" />
+          <Property Name="Integer03" Type="Int32" />
+          <Property Name="Integer04" Type="Int32" />
+          <Property Name="Integer05" Type="Int32" />
+          <Property Name="Integer06" Type="Int32" />
+          <Property Name="Integer07" Type="Int32" />
+          <Property Name="Integer08" Type="Int32" />
+          <Property Name="Integer09" Type="Int32" />
+          <Property Name="Integer10" Type="Int32" />
+          <Property Name="Long01" Type="Int64" />
+          <Property Name="Long02" Type="Int64" />
+          <Property Name="Long03" Type="Int64" />
+          <Property Name="Long04" Type="Int64" />
+          <Property Name="Long05" Type="Int64" />
+          <Property Name="DateTime01" Type="DateTime" Precision="3" />
+          <Property Name="DateTime02" Type="DateTime" Precision="3" />
+          <Property Name="DateTime03" Type="DateTime" Precision="3" />
+          <Property Name="DateTime04" Type="DateTime" Precision="3" />
+          <Property Name="DateTime05" Type="DateTime" Precision="3" />
+          <Property Name="Guid01" Type="Guid" />
+          <Property Name="Guid02" Type="Guid" />
+          <Property Name="Guid03" Type="Guid" />
+          <Property Name="Float01" Type="Double" />
+          <Property Name="Float02" Type="Double" />
+          <Property Name="Float03" Type="Double" />
+          <Property Name="Float04" Type="Double" />
+          <Property Name="Float05" Type="Double" />
+          <Property Name="Float06" Type="Double" />
+          <Property Name="Float07" Type="Double" />
+          <Property Name="Decimal01" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Decimal02" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="String01" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="String02" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="String03" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="String04" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="String05" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="String06" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="String07" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="String08" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="String09" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="String10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Binary01" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Binary02" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Binary03" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Binary04" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Binary05" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Indexed_Boolean01" Type="Boolean" />
+          <Property Name="Indexed_Integer01" Type="Int32" />
+          <Property Name="Indexed_Integer02" Type="Int32" />
+          <Property Name="Indexed_Integer03" Type="Int32" />
+          <Property Name="Indexed_Long01" Type="Int64" />
+          <Property Name="Indexed_Long02" Type="Int64" />
+          <Property Name="Indexed_DateTime01" Type="DateTime" Precision="3" />
+          <Property Name="Indexed_Guid01" Type="Guid" />
+          <Property Name="Indexed_Float01" Type="Double" />
+          <Property Name="Indexed_Float02" Type="Double" />
+          <Property Name="Indexed_Float03" Type="Double" />
+          <Property Name="Indexed_Decimal01" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Indexed_String01" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="Indexed_String02" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="Indexed_String03" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="Indexed_Binary01" Type="Binary" MaxLength="900" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblBigTableReference">
+          <Key>
+            <PropertyRef Name="pkId" />
+            <PropertyRef Name="PropertyName" />
+            <PropertyRef Name="IsKey" />
+            <PropertyRef Name="Index" />
+          </Key>
+          <Property Name="pkId" Type="Int64" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="PropertyName" Type="String" MaxLength="75" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CollectionType" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ElementType" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ElementStoreName" Type="String" MaxLength="375" FixedLength="false" Unicode="true" />
+          <Property Name="IsKey" Type="Boolean" Nullable="false" />
+          <Property Name="Index" Type="Int32" Nullable="false" />
+          <Property Name="BooleanValue" Type="Boolean" />
+          <Property Name="IntegerValue" Type="Int32" />
+          <Property Name="LongValue" Type="Int64" />
+          <Property Name="DateTimeValue" Type="DateTime" Precision="3" />
+          <Property Name="GuidValue" Type="Guid" />
+          <Property Name="FloatValue" Type="Double" />
+          <Property Name="StringValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BinaryValue" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="RefIdValue" Type="Int64" />
+        </EntityType>
+        <EntityType Name="tblBigTableStoreInfo">
+          <Key>
+            <PropertyRef Name="StoreName" />
+            <PropertyRef Name="PropertyName" />
+          </Key>
+          <Property Name="StoreName" Type="String" MaxLength="375" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PropertyName" Type="String" MaxLength="75" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PropertyMapType" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PropertyIndex" Type="Int32" Nullable="false" />
+          <Property Name="PropertyType" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="Version" Type="Int32" Nullable="false" />
+          <Property Name="ColumnName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ColumnRowIndex" Type="Int32" />
+          <Property Name="TableName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblPageDefinitionType">
+          <Key>
+            <PropertyRef Name="pkID" />
+          </Key>
+          <Property Name="pkID" Type="Int32" Nullable="false" />
+          <Property Name="Property" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AssemblyName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblPlugIn">
+          <Key>
+            <PropertyRef Name="pkID" />
+          </Key>
+          <Property Name="pkID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AssemblyName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Settings" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Saved" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EPiServerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblBigTables" EntityType="Self.tblBigTable" />
+          <EntitySet Name="tblBigTableReferences" EntityType="Self.tblBigTableReference" />
+          <EntitySet Name="tblBigTableStoreInfoes" EntityType="Self.tblBigTableStoreInfo" />
+          <EntitySet Name="tblPageDefinitionTypes" EntityType="Self.tblPageDefinitionType" />
+          <EntitySet Name="tblPlugIns" EntityType="Self.tblPlugIn" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EPiServerModelStoreContainer" CdmEntityContainer="EPiServerEntities">
+          <EntitySetMapping Name="tblBigTables">
+            <EntityTypeMapping TypeName="EPiServer.Model.tblBigTable">
+              <MappingFragment StoreEntitySet="tblBigTable">
+                <ScalarProperty Name="pkId" ColumnName="pkId" />
+                <ScalarProperty Name="Row" ColumnName="Row" />
+                <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+                <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+                <ScalarProperty Name="Boolean01" ColumnName="Boolean01" />
+                <ScalarProperty Name="Boolean02" ColumnName="Boolean02" />
+                <ScalarProperty Name="Boolean03" ColumnName="Boolean03" />
+                <ScalarProperty Name="Boolean04" ColumnName="Boolean04" />
+                <ScalarProperty Name="Boolean05" ColumnName="Boolean05" />
+                <ScalarProperty Name="Integer01" ColumnName="Integer01" />
+                <ScalarProperty Name="Integer02" ColumnName="Integer02" />
+                <ScalarProperty Name="Integer03" ColumnName="Integer03" />
+                <ScalarProperty Name="Integer04" ColumnName="Integer04" />
+                <ScalarProperty Name="Integer05" ColumnName="Integer05" />
+                <ScalarProperty Name="Integer06" ColumnName="Integer06" />
+                <ScalarProperty Name="Integer07" ColumnName="Integer07" />
+                <ScalarProperty Name="Integer08" ColumnName="Integer08" />
+                <ScalarProperty Name="Integer09" ColumnName="Integer09" />
+                <ScalarProperty Name="Integer10" ColumnName="Integer10" />
+                <ScalarProperty Name="Long01" ColumnName="Long01" />
+                <ScalarProperty Name="Long02" ColumnName="Long02" />
+                <ScalarProperty Name="Long03" ColumnName="Long03" />
+                <ScalarProperty Name="Long04" ColumnName="Long04" />
+                <ScalarProperty Name="Long05" ColumnName="Long05" />
+                <ScalarProperty Name="DateTime01" ColumnName="DateTime01" />
+                <ScalarProperty Name="DateTime02" ColumnName="DateTime02" />
+                <ScalarProperty Name="DateTime03" ColumnName="DateTime03" />
+                <ScalarProperty Name="DateTime04" ColumnName="DateTime04" />
+                <ScalarProperty Name="DateTime05" ColumnName="DateTime05" />
+                <ScalarProperty Name="Guid01" ColumnName="Guid01" />
+                <ScalarProperty Name="Guid02" ColumnName="Guid02" />
+                <ScalarProperty Name="Guid03" ColumnName="Guid03" />
+                <ScalarProperty Name="Float01" ColumnName="Float01" />
+                <ScalarProperty Name="Float02" ColumnName="Float02" />
+                <ScalarProperty Name="Float03" ColumnName="Float03" />
+                <ScalarProperty Name="Float04" ColumnName="Float04" />
+                <ScalarProperty Name="Float05" ColumnName="Float05" />
+                <ScalarProperty Name="Float06" ColumnName="Float06" />
+                <ScalarProperty Name="Float07" ColumnName="Float07" />
+                <ScalarProperty Name="Decimal01" ColumnName="Decimal01" />
+                <ScalarProperty Name="Decimal02" ColumnName="Decimal02" />
+                <ScalarProperty Name="String01" ColumnName="String01" />
+                <ScalarProperty Name="String02" ColumnName="String02" />
+                <ScalarProperty Name="String03" ColumnName="String03" />
+                <ScalarProperty Name="String04" ColumnName="String04" />
+                <ScalarProperty Name="String05" ColumnName="String05" />
+                <ScalarProperty Name="String06" ColumnName="String06" />
+                <ScalarProperty Name="String07" ColumnName="String07" />
+                <ScalarProperty Name="String08" ColumnName="String08" />
+                <ScalarProperty Name="String09" ColumnName="String09" />
+                <ScalarProperty Name="String10" ColumnName="String10" />
+                <ScalarProperty Name="Binary01" ColumnName="Binary01" />
+                <ScalarProperty Name="Binary02" ColumnName="Binary02" />
+                <ScalarProperty Name="Binary03" ColumnName="Binary03" />
+                <ScalarProperty Name="Binary04" ColumnName="Binary04" />
+                <ScalarProperty Name="Binary05" ColumnName="Binary05" />
+                <ScalarProperty Name="Indexed_Boolean01" ColumnName="Indexed_Boolean01" />
+                <ScalarProperty Name="Indexed_Integer01" ColumnName="Indexed_Integer01" />
+                <ScalarProperty Name="Indexed_Integer02" ColumnName="Indexed_Integer02" />
+                <ScalarProperty Name="Indexed_Integer03" ColumnName="Indexed_Integer03" />
+                <ScalarProperty Name="Indexed_Long01" ColumnName="Indexed_Long01" />
+                <ScalarProperty Name="Indexed_Long02" ColumnName="Indexed_Long02" />
+                <ScalarProperty Name="Indexed_DateTime01" ColumnName="Indexed_DateTime01" />
+                <ScalarProperty Name="Indexed_Guid01" ColumnName="Indexed_Guid01" />
+                <ScalarProperty Name="Indexed_Float01" ColumnName="Indexed_Float01" />
+                <ScalarProperty Name="Indexed_Float02" ColumnName="Indexed_Float02" />
+                <ScalarProperty Name="Indexed_Float03" ColumnName="Indexed_Float03" />
+                <ScalarProperty Name="Indexed_Decimal01" ColumnName="Indexed_Decimal01" />
+                <ScalarProperty Name="Indexed_String01" ColumnName="Indexed_String01" />
+                <ScalarProperty Name="Indexed_String02" ColumnName="Indexed_String02" />
+                <ScalarProperty Name="Indexed_String03" ColumnName="Indexed_String03" />
+                <ScalarProperty Name="Indexed_Binary01" ColumnName="Indexed_Binary01" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBigTableReferences">
+            <EntityTypeMapping TypeName="EPiServer.Model.tblBigTableReference">
+              <MappingFragment StoreEntitySet="tblBigTableReference">
+                <ScalarProperty Name="pkId" ColumnName="pkId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+                <ScalarProperty Name="CollectionType" ColumnName="CollectionType" />
+                <ScalarProperty Name="ElementType" ColumnName="ElementType" />
+                <ScalarProperty Name="ElementStoreName" ColumnName="ElementStoreName" />
+                <ScalarProperty Name="IsKey" ColumnName="IsKey" />
+                <ScalarProperty Name="Index" ColumnName="Index" />
+                <ScalarProperty Name="BooleanValue" ColumnName="BooleanValue" />
+                <ScalarProperty Name="IntegerValue" ColumnName="IntegerValue" />
+                <ScalarProperty Name="LongValue" ColumnName="LongValue" />
+                <ScalarProperty Name="DateTimeValue" ColumnName="DateTimeValue" />
+                <ScalarProperty Name="GuidValue" ColumnName="GuidValue" />
+                <ScalarProperty Name="FloatValue" ColumnName="FloatValue" />
+                <ScalarProperty Name="StringValue" ColumnName="StringValue" />
+                <ScalarProperty Name="BinaryValue" ColumnName="BinaryValue" />
+                <ScalarProperty Name="RefIdValue" ColumnName="RefIdValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBigTableStoreInfoes">
+            <EntityTypeMapping TypeName="EPiServer.Model.tblBigTableStoreInfo">
+              <MappingFragment StoreEntitySet="tblBigTableStoreInfo">
+                <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+                <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+                <ScalarProperty Name="PropertyMapType" ColumnName="PropertyMapType" />
+                <ScalarProperty Name="PropertyIndex" ColumnName="PropertyIndex" />
+                <ScalarProperty Name="PropertyType" ColumnName="PropertyType" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+                <ScalarProperty Name="ColumnRowIndex" ColumnName="ColumnRowIndex" />
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPageDefinitionTypes">
+            <EntityTypeMapping TypeName="EPiServer.Model.tblPageDefinitionType">
+              <MappingFragment StoreEntitySet="tblPageDefinitionType">
+                <ScalarProperty Name="pkID" ColumnName="pkID" />
+                <ScalarProperty Name="Property" ColumnName="Property" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="AssemblyName" ColumnName="AssemblyName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPlugIns">
+            <EntityTypeMapping TypeName="EPiServer.Model.tblPlugIn">
+              <MappingFragment StoreEntitySet="tblPlugIn">
+                <ScalarProperty Name="pkID" ColumnName="pkID" />
+                <ScalarProperty Name="AssemblyName" ColumnName="AssemblyName" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="Settings" ColumnName="Settings" />
+                <ScalarProperty Name="Saved" ColumnName="Saved" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
